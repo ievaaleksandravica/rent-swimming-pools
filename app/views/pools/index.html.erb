@@ -1,0 +1,9 @@
+<h1>testing my pool index page</h1>
+<% @pools.each do |pool| %>
+    <p> <b> <%= pool.description %> </b> </p>
+    <p>Category:  <%= pool.category  %> </p>
+    <p>Qm:  <%= pool.qm  %> </p>
+    <p>Price_per_day:  <%= pool.price_per_day  %> </p>
+    <p>Capacity:  <%= pool.max_capacity  %> </p>
+    <p>User:  <%= pool.user.first_name  %> </p>
+<% end %>
