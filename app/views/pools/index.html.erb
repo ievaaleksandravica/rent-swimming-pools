@@ -8,7 +8,9 @@
     <p>Price_per_day:  <%= pool.price_per_day  %> </p>
     <p>Capacity:  <%= pool.max_capacity  %> </p>
     <p>User:  <%= pool.user.first_name  %> </p>
-
+    <% pool.photos.each do |photo| %>
+  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+ <% end %>
 <% end %>
 </div>
 

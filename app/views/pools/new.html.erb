@@ -10,6 +10,7 @@
   <%= f.input :qm %>
   <%= f.input :price_per_day %>
   <%= f.input :max_capacity %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
   <%= f.submit %>
 <% end %>
 </div>
