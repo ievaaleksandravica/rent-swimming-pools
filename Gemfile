@@ -59,6 +59,7 @@ group :test do
 end
 
 gem 'devise'
+gem 'cloudinary', '~> 1.16.0'
 
 
 
