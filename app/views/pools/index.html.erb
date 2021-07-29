@@ -11,6 +11,7 @@
     <% pool.photos.each do |photo| %>
   <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
  <% end %>
+  <%= link_to "See more", pool_path(pool), class: "btn btn-secondary"  %>
 <% end %>
 </div>
 
