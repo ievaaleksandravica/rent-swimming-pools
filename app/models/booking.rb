@@ -6,7 +6,8 @@ class Booking < ApplicationRecord
 
   def valid_dates
     if start_date > end_date
-      self.errors.add :start_date, 'Start Date has to be before end date'
+      self.errors.add :end_date, 'Start Date has to be before end date'
     end
   end
+
 end
