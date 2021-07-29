@@ -1,4 +1,20 @@
 <div class="container">
+
+<% if @bookings.length > 0 %>
+<h1>Your bookings for this swimming pool!</h1>
+  <% @bookings.each do |booking| %>
+    <p><%= booking.start_date %> until <%= booking.end_date %>
+  <% end %>
+<% else %>
+<% end %>
+
+<%= simple_form_for [@pool, @booking] do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.submit %>
+<% end %>
+
+
 <h1>test</h1>
     <p> <b> <%= @pool.description %> </b> </p>
     <p>Title:  <%= @pool.title  %> </p>
@@ -12,4 +28,5 @@
     <% @pool.photos.each do |photo| %>
   <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
  <% end %>
+
 </div>

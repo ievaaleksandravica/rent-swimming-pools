@@ -5,10 +5,14 @@ class PoolsController < ApplicationController
     @pools = Pool.all
   end
 
-  def show; end
+  def show
+    @bookings = Booking.where(pool_id: params[:id])
+    @booking = Booking.new
+  end
 
   def new
     @pool = Pool.new
+
   end
 
   def create
