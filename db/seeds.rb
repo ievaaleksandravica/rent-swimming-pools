@@ -11,67 +11,72 @@
 category = ['Swimming pool', 'Inflatable pool','Jacuzzi', 'Kids pool' ]
 capacity = ['less than 3', '3 to 5','5 to 10', '10 to 20', '20 to 50', 'More than 50']
 
-user_1 = User.new(
-  email: 'banana@banana.com',
-  password: 'banana',
-  first_name: 'Yellow',
-  last_name: 'Banana',
-  birthdate: '2000-01-01'
-  )
+# user_1 = User.new(
+#   email: 'banana@banana.com',
+#   password: 'banana',
+#   first_name: 'Yellow',
+#   last_name: 'Banana',
+#   birthdate: '2000-01-01'
+#   )
 
-user_1.save!
+# user_1.save!
 
-pool_1 = Pool.new(
-  title: 'Very attractive pool',
-  description: 'The pool is private in a beautiful backyard in Burbank California. There are lounge chairs to relax in the sun and a table, umbrella with chairs. Please contact me for availability and information before booking .Please read all information on my site. Also please do not invite additional guests if already booked. Thank You',
-  street: 'Elisabethkirchstraße 22',
-  city: 'Berlin',
-  zip_code: 10115,
-  category: category.sample,
-  max_capacity: capacity.sample,
-  qm: rand(5..100) ,
-  price_per_day: rand(50..250),
-  rating: rand(1..5),
-  user: User.first
- )
-pool_1.save!
+# pool_1 = Pool.new(
+#   title: 'Very attractive pool',
+#   description: 'The pool is private in a beautiful backyard in Burbank California. There are lounge chairs to relax in the sun and a table, umbrella with chairs. Please contact me for availability and information before booking .Please read all information on my site. Also please do not invite additional guests if already booked. Thank You',
+#   street: 'Elisabethkirchstraße 22',
+#   city: 'Berlin',
+#   zip_code: 10115,
+#   category: category.sample,
+#   max_capacity: capacity.sample,
+#   qm: rand(5..100) ,
+#   price_per_day: rand(50..250),
+#   rating: rand(1..5),
+#   user: User.first
+#  )
+# pool_1.save!
 
-booking_1 = Booking.new(
-  start_date: '2021-08-01',
-  end_date: '2021-08-4',
-  pool: Pool.last,
-  user: User.last
-  )
-booking_1.save!
-# pool_2 =  Pool.create(
+# booking_1 = Booking.new(
+#   start_date: '2021-08-01',
+#   end_date: '2021-08-4',
+#   pool: Pool.last,
+#   user: User.last
+#   )
+# booking_1.save!
+
+# pool_2 = Pool.new(
 #   title: 'Urban Jungle Oasis',
 #   description: 'Surround yourself in Bamboo and Brazilian Teak as you escape city life and unwind in this one-of-a-kind designer backyard. Inspired by our trips to Bali and Brazil, this vacation-like retreat is equipped with spa jets, waterfall, a luxurious pebble bottom finish, and an 8-foot privacy fence.',
 #   street: 'Invalidenstraße 23',
 #   city: 'Berlin',
 #   zip_code: 10115,
-#   category: category.sample ,
+#   category: category.sample,
 #   max_capacity: capacity.sample,
 #   qm: rand(5..100),
 #   price_per_day: rand(50..250),
 #   rating: rand(1..5),
-#   user_id: 1
+#   user: User.first
 #  )
+# pool_2.save!
+
+pool_3 = Pool.new(
+  title: 'Lounge Vibe, gorgeous area, private!',
+  description: 'Lounge Vibe, gorgeous area, private!
+  A great space with a heated pool, Sonos system, plenty of seating + parking, perfect for a day or evening event',
+  street: 'Rudi-Dutschke-Straße 26',
+  city: 'Berlin',
+  zip_code: 10969,
+  category: category.sample,
+  max_capacity: capacity.sample,
+  qm: rand(5..100),
+  price_per_day: rand(50..250),
+  rating: rand(1..5),
+  user: User.first,
+  address: "Rudi-Dutschke-Straße 26, 10969, Berlin"
+ )
+pool_3.save!
 
 
-# pool_3 = Pool.create(
-#   title: 'Lounge Vibe, gorgeous area, private!',
-#   description: 'Lounge Vibe, gorgeous area, private!
-#   A great space with a heated pool, Sonos system, plenty of seating + parking, perfect for a day or evening event',
-#   street: 'Rudi-Dutschke-Straße 26',
-#   city: 'Berlin',
-#   zip_code: 10969,
-#   category: category.sample ,
-#   max_capacity: capacity.sample,
-#   qm: rand(5..100),
-#   price_per_day: rand(50..250),
-#   rating: rand(1..5),
-#   user_id: 1
-#  )
 
 
 # pool_4 = Pool.create(
@@ -188,9 +193,9 @@ booking_1.save!
 #   user_id: 1
 #  )
 
-pool_1.photos.attach(io: URI.open("https://res.cloudinary.com/dzlzazila/image/upload/v1627583782/images_4_f5am0k.jpg"), filename: 'rp1.jpg', content_type: 'image/jpg')
+# pool_1.photos.attach(io: URI.open("https://res.cloudinary.com/dzlzazila/image/upload/v1627583782/images_4_f5am0k.jpg"), filename: 'rp1.jpg', content_type: 'image/jpg')
 
-pool_1.photos.attach(io: URI.open("https://res.cloudinary.com/dzlzazila/image/upload/v1627583782/images_6_iarxsh.jpg"), filename: 'rp2.jpg', content_type: 'image/jpg')
+# pool_1.photos.attach(io: URI.open("https://res.cloudinary.com/dzlzazila/image/upload/v1627583782/images_6_iarxsh.jpg"), filename: 'rp2.jpg', content_type: 'image/jpg')
 
-pool_1.photos.attach(io: URI.open("https://res.cloudinary.com/dzlzazila/image/upload/v1627583782/images_1_rs8ezg.jpg"), filename: 'rp1.jpg', content_type: 'image/jpg')
+# pool_1.photos.attach(io: URI.open("https://res.cloudinary.com/dzlzazila/image/upload/v1627583782/images_1_rs8ezg.jpg"), filename: 'rp1.jpg', content_type: 'image/jpg')
 
