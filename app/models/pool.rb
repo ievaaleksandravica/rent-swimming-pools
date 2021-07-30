@@ -15,4 +15,7 @@ class Pool < ApplicationRecord
   validates :price_per_day, presence: true
   validates_numericality_of :price_per_day
   validates :max_capacity, presence: true
+
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end

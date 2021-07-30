@@ -18,6 +18,7 @@ class PoolsController < ApplicationController
   def create
     @pool = Pool.new(pool_params)
     @pool.user = current_user
+    @pool.address = "#{@pool.street}, #{@pool.zip_code}, #{@pool.city}"
     if @pool.save
       redirect_to :pools
     else
