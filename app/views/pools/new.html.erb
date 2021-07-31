@@ -1,20 +1,28 @@
 <div class="container">
 
-<% category = ['Swimming pool', 'Inflatable pool','Jacuzzi', 'Kids pool' ] %>
-<% capacity = ['less than 3', '3 to 5','5 to 10', '10 to 20', '20 to 50', 'More than 50'] %>
+<div class="row">
+  <div class="col-sm mt-3 rounded d-flex justify-content-center " style="color:#c9cfed">
+            <% category = ['Swimming pool', 'Inflatable pool','Jacuzzi', 'Kids pool' ] %>
+            <% capacity = ['less than 3', '3 to 5','5 to 10', '10 to 20', '20 to 50', 'More than 50'] %>
 
-<%= simple_form_for(@pool) do |f| %>
-  <%= f.input :title %>
-  <%= f.input :description %>
-  <%= f.input :street %>
-  <%= f.input :city %>
-  <%= f.input :zip_code %>
-  <%= f.input :category, collection: category %>
-  <%= f.input :qm %>
-  <%= f.input :price_per_day, label: 'Daily price (€)' %>
-  <%= f.input :max_capacity, collection: capacity %>
-  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-  <%= f.submit %>
-<% end %>
+        <%= simple_form_for(@pool) do |f| %>
+          <%= f.input :title %>
+          <%= f.input :description %>
+          <%= f.input :street %>
+          <%= f.input :city %>
+          <%= f.input :zip_code %>
+          <%= f.input :category, collection: category %>
+          <%= f.input :qm %>
+          <%= f.input :price_per_day, label: 'Daily price (€)' %>
+          <%= f.input :max_capacity, collection: capacity %>
+          <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+          <%= f.submit class: "mb-3 btn-ghost-light btn-block" %>
+        <% end %>
+    </div>
+
+
+  </div>
 </div>
+
+
 

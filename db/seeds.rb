@@ -341,7 +341,6 @@ pool_8.photos.attach(io: URI.open("https://res.cloudinary.com/dzlzazila/image/up
 puts "Photos for Pool_8 attached"
 
 
-
 pool_9.photos.attach(io: URI.open("https://res.cloudinary.com/dzlzazila/image/upload/v1627723780/7413-12385010561597621075_s0p3e2.jpg"), filename: 'rp25.jpg', content_type: 'image/jpg')
 pool_9.photos.attach(io: URI.open("https://res.cloudinary.com/dzlzazila/image/upload/v1627723780/lSHVk0sEX5B1cZCXFYIXJDV4ZDkPzbrYmZVuwAi6_xmbwm3.jpg"), filename: 'rp26.jpg', content_type: 'image/jpg')
 
