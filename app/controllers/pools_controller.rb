@@ -3,11 +3,26 @@ class PoolsController < ApplicationController
 
   def index
     @pools = Pool.all
+    @markers = @pools.geocoded.map do |pool|
+      {
+        lat: pool.latitude,
+        lng: pool.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { pool: pool }),
+        image_url: helpers.asset_url('https://image.shutterstock.com/image-vector/sun-icon-600w-411668686.jpg')
+      }
+
+    end
   end
 
   def show
     @bookings = Booking.where(pool_id: params[:id])
     @booking = Booking.new
+    @markers =
+      [{
+        lng: @pool.longitude,
+        lat: @pool.latitude,
+       image_url: helpers.asset_url('https://image.shutterstock.com/image-vector/sun-icon-600w-411668686.jpg')
+      }]
   end
 
   def new
