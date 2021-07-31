@@ -8,7 +8,7 @@ class PoolsController < ApplicationController
         lat: pool.latitude,
         lng: pool.longitude,
         info_window: render_to_string(partial: "info_window", locals: { pool: pool }),
-        image_url: helpers.asset_url('https://image.shutterstock.com/image-vector/sun-icon-600w-411668686.jpg')
+        image_url: helpers.asset_url('14-142949_map-marker-icons-png-map-marker-icon-png')
       }
 
     end
