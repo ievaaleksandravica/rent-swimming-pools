@@ -20,13 +20,18 @@
         <%= f.submit class: "mb-3 btn-ghost-light btn-block" %>
 <% end %>
         <% if @bookings.length > 0 %>
-          <p class="mt-3" style="color:#c9cfed;">🎉 This swimming pool is currently booked off on the following dates
+          <p class="mt-3" style="color:#c9cfed;">🎉 You have booked the swimming pool for the following dates:
         </p>
         <ul style="color:#c9cfed">
           <% @bookings.each do |booking| %>
             <li> <%= booking.start_date %> - <%= booking.end_date %></li>
           <% end %>
         </ul>
+        <p class="mt-3" style="color:#c9cfed;">Here is your QR code for accessing the pool:
+        </p>
+        <div class="d-flex justify-content-center">
+        <%= image_tag "pngtree-new-technology-barcode-qr-code-vector-classic-qr-code-vector-black-png-image_5204764.jpg", alt: "Le Wagon", width: 200, class: "mb-3 rounded " %>
+        </div>
         <% else %>
         <% end %>
 </div>
